@@ -1,11 +1,14 @@
-Package: Find foci
+Package: Findfoci
 Title: Assigns foci to cells
 Version: 0.0.0.9000
-Authors@R: 
-    person("Johannes Nicolaus", "Wibisana", , "nico@protein.osaka-u.ac.jp", role = c("aut", "cre"),
+Authors@R: person("Johannes Nicolaus", "Wibisana", , "nico@protein.osaka-u.ac.jp", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2452-8702"))
 Description: This package includes scripts used in the counting and visualization of NF-kB foci.
 License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+Depends:
+    R (>= 3.6.0)
+Imports:
+    dplyr,
+    ggplot2,
+    shiny
