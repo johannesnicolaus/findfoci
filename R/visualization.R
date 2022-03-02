@@ -5,7 +5,7 @@
 #'
 #' @examples
 heatscatter <- function() {
-  appDir <- system.file("visualization", "app", package = "Findfoci")
+  appDir <- system.file("visualization", "app", package = "findfoci")
   if (appDir == "") {
     stop("Could not find example directory. Try re-installing `Find foci`.", call. = FALSE)
   }
