@@ -61,7 +61,7 @@ shinyServer(function(input, output) {
         variable_filter <- dplyr::filter(log_transformed, time == i)
         variable_filter <- dplyr::arrange(variable_filter, foci_count)
         variable_filter$Density<- stats::density(variable_filter$foci_count, n=length(variable_filter$foci_count))$y
-        res <- bind_rows(res, variable_filter)
+        res <- rbind(res, variable_filter)
       }
 
 
