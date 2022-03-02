@@ -1,4 +1,5 @@
-Package: Findfoci
+Package: findfoci
+Type: Package
 Title: Assigns foci to cells
 Version: 0.0.0.9000
 Authors@R: person("Johannes Nicolaus", "Wibisana", , "nico@protein.osaka-u.ac.jp", role = c("aut", "cre"),
