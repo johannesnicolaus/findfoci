@@ -40,7 +40,7 @@ Example raw data and ImageJ macro outputs are supplied within the `rawdata` and 
 7. Remove unwanted cells using mouse click.
 8. Click OK and Continue to export the result files to the specified directory.
 
-### Foci count analysis using RStudio
+### Foci count analysis and visualization using RStudio
 
 1. Install package
 
@@ -50,25 +50,25 @@ Requirements:
 - ggplot2
 - dplyr
 
-```R
-devtools::install_github("johannesnicolaus/findfoci")
-```
+    ```R
+    devtools::install_github("johannesnicolaus/findfoci")
+    ```
 
-1. Run the following commands to summarize the number of foci within each cell and save the resulting data frame as `results.csv` to the current directory. Specify dose unit and time unit according to the file name.
+2. Run the following commands to summarize the number of foci within each cell and save the resulting data frame as `results.csv` to the current directory. Specify dose unit and time unit according to the file name.
 
-```R
-findfoci::count_foci("DIRECTORY_OF_IMAGEJ_OUTPUT", dose = "ugml", time = "min")
-write.csv("results.csv")
-```
+    ```R
+    findfoci::count_foci("DIRECTORY_OF_IMAGEJ_OUTPUT", dose = "ugml", time = "min")
+    write.csv("results.csv")
+    ```
 
-2. Run the Shiny app for data visualization.
+3. Run the Shiny app for data visualization.
 
     ```R
     findfoci::heatscatter()
     ```
 
-3. Using Shiny app interface, click the button browse and browse for the `results.csv` file.
-4. Change different visualization parameters using the user interface of the Shiny app.
+4. Using Shiny app interface, click the button browse and browse for the `results.csv` file.
+5. Change different visualization parameters using the user interface of the Shiny app.
     - Data summarisation: choose how to summarize data for the line plot. (Default: median)
     - Jitter width : specifies the width of the jitter plot.
     - Data transformation method: choose how to transform the data for easier visualization. (Default: log2(n+1))
