@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^imagej_output$
+^rawdata$
+*Rproj
+^LICENSE\.md$
