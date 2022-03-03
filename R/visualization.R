@@ -1,9 +1,9 @@
-#' Heatscatter
+#' Shiny-based visualization of single-cell foci number across time
 #'
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples heatscatter()
 heatscatter <- function() {
   appDir <- system.file("visualization", "app", package = "findfoci")
   if (appDir == "") {
